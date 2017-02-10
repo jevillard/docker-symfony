@@ -4,6 +4,9 @@ start: docker-compose-dev.yml
 stop:
 	docker-compose down --volumes
 
+nginx-reload:
+	docker-compose exec nginx nginx -s reload
+
 env:
 	cp .env.dist .env
 
