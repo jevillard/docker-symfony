@@ -1,3 +1,9 @@
+start: docker-compose-dev.yml
+	docker-compose up --build
+
+stop:
+	docker-compose down --volumes
+
 env:
 	cp .env.dist .env
 
