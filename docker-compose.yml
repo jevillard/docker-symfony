@@ -1,6 +1,9 @@
 version: '2'
 services:
     symfony:
+        extends:
+            file: docker-compose-dev.yml
+            service: parent
         build: docker/symfony
         volumes:
             - ./src:/var/www/html
