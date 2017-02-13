@@ -15,3 +15,4 @@ docker-compose-dev.yml:
 	@echo "services:" >> $@
 	@echo "    parent:" >> $@
 	@echo "        user: \""$(shell id -u):$(shell id -g)"\"" >> $@
+	@echo "        env_file: .env" >> $@
