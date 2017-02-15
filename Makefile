@@ -1,8 +1,8 @@
 start: docker-compose-dev.yml
-	docker-compose up --build
+	docker-compose --project-name docker-symfony up --build
 
 stop:
-	docker-compose down --volumes
+	docker-compose --project-name docker-symfony down --volumes
 
 nginx-reload:
 	docker-compose exec nginx nginx -s reload
