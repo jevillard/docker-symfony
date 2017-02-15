@@ -15,5 +15,11 @@ Before jumping into steps below, make sure you have recent versions of Docker & 
 * Create a new Symfony project with [Symfony Installer](http://symfony.com/doc/current/setup.html#basing-your-project-on-a-specific-symfony-version) : ```rm .gitkeep && symfony new ./```.
 * Now you can visit [http://localhost:8000](http://localhost:8000).
 
+## Shortcuts Make
+* Reload nginx : ```make nginx-reload```.
+* Access to symfony container : ```make symfony```.
+* Access to nginx container : ```make nginx```.
+* Access to MySQL database : ```make mysql```.
+
 ## Licence
 The project is distributed under the MIT license.

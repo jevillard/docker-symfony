@@ -5,7 +5,16 @@ stop:
 	docker-compose --project-name docker-symfony down --volumes
 
 nginx-reload:
-	docker-compose exec nginx nginx -s reload
+	docker-compose --project-name docker-symfony exec nginx nginx -s reload
+
+symfony:
+	docker-compose --project-name docker-symfony exec symfony bash
+
+mysql:
+	docker-compose --project-name docker-symfony exec mysql mysql -u symfony -psymfony symfony
+
+nginx:
+	docker-compose --project-name docker-symfony exec nginx bash
 
 env:
 	cp .env.dist .env
